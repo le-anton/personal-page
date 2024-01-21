@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 const BannerDiv = styled.div`
-    background-color: ${props => props.theme === 'light' ? 'powderblue' : '#34495E'};
+    background-color: ${props => props.theme === 'light' ? '#c7d8c6' : '#34495E'};
     border: 4px solid indianred;
     border-radius: 10px;
     position: relative;

@@ -4,13 +4,16 @@ import { ThemeContext } from "../context/ThemeContext";
 
 
 const HomePage = () => {
-    const { theme, setTheme } = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
 
     return (
         <s.HomePageWrapper theme={theme}>
-            <div className={theme}>
-                Hello
-            </div>
+            <s.IntroDiv className={theme}>
+                Hi, thanks for visiting my page!
+                <br />
+                I am a UK based web developer
+                with a penchant for photography and guitar on the side.
+            </s.IntroDiv>
         </s.HomePageWrapper>
     )
 }
