@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const BannerDiv = styled.div`
     background-color: ${props => props.theme === 'light' ? '#c7d8c6' : '#34495E'};
-    border: 4px solid indianred;
+    border: 3px solid indianred;
     border-radius: 10px;
     position: relative;
     width: auto;
@@ -19,7 +19,7 @@ const BannerDiv = styled.div`
 `
 
 const ThemeButton = styled.button`
-background-color: ${props => props.theme === 'dark' ? 'white' : '#911616'};     
+    background-color: ${props => props.theme === 'dark' ? 'white' : '#CC4629'};     
     border: 0 solid #e2e8f0;
     border-radius: 1.5rem;
     box-sizing: border-box;
@@ -30,7 +30,6 @@ background-color: ${props => props.theme === 'dark' ? 'white' : '#911616'};
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1;
-    padding: 1rem 1.4rem;
     text-align: center;
     text-decoration: none #0d172a solid;
     text-decoration-thickness: auto;
@@ -61,10 +60,18 @@ const TitleDiv = styled.div`
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        background-image: linear-gradient(180deg, indianred, salmon, #FF5733);
+        
         background-clip: text;
         -webkit-background-clip: text;
         z-index: 1;
+    }
+
+    .first {
+        color: #FF5733;
+    }
+
+    .last {
+        color: #C09576;
     }
 `
 

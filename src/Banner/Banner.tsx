@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import s from "./Banner.styles"
 import { ThemeContext } from "../context/ThemeContext";
-import { Link } from "react-router-dom";
+import NavButton from "../NavButton/NavButton";
 
 interface BannerProps {
-    name: string
+    firstName: string,
+    lastName: string
 }
 
 const Banner = (props: BannerProps) => {
@@ -21,17 +22,17 @@ const Banner = (props: BannerProps) => {
         <s.BannerDiv theme={theme}>
             <s.TitleDiv>
                 <h1>
-                    {props.name}
+                    <span className="first">{props.firstName}</span>&nbsp;
+                    <span className="last">{props.lastName}</span>
                 </h1>
             </s.TitleDiv>
-
-            <Link to="/">Home</Link>
-            <Link to="/music">Music</Link>
+            <NavButton path="/" name="Home"></NavButton>
+            <NavButton path="/photo" name="Photos"></NavButton>
+            <NavButton path="/music" name="Music"></NavButton>
             <s.ThemeButton role="button" className="switch-theme" onClick={() => setTheme(switchTheme())} theme={theme}>
                 {theme === 'dark' ? 'light' : 'dark'}
             </s.ThemeButton>
         </s.BannerDiv>
-
     )
 }
 

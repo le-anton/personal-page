@@ -8,7 +8,7 @@ const HomePage = () => {
 
     return (
         <s.HomePageWrapper theme={theme}>
-            <s.IntroDiv className={theme}>
+            <s.IntroDiv theme={theme}>
                 Hi, thanks for visiting my page!
                 <br />
                 I am a UK based web developer
