@@ -6,7 +6,8 @@ const PageContainer = styled.div`
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
-    justify-content: flex-start;
+    justify-content: flex-start;    
+    background-image: ${props => props.theme === 'light' ? "url('light-flowers-bg.jpg')" : "url('/dark-flowers-bg.jpg')"};
 `
 
 const BannerContainer = styled.div`
@@ -16,7 +17,7 @@ const BannerContainer = styled.div`
 const HomePageContainer = styled.div`
     padding: 10px;
     flex-grow: 1;
-    display: flex;
+    display: flex;    
 `
 
 const s = {

@@ -6,10 +6,10 @@ const HomePageWrapper = styled.div`
     border: 3px solid indianred;
     border-radius: 10px;
     position: relative;
-    width: auto;
+    width: 100vw;
     font-size: 2em;
     text-align: left;
-    padding: 1.5em;
+    padding: 1.2em;
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;

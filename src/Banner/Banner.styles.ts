@@ -33,12 +33,12 @@ const ThemeButton = styled.button`
     text-align: center;
     text-decoration: none #0d172a solid;
     text-decoration-thickness: auto;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    transition: all .4s cubic-bezier(.4, 0, .2, 1);
     box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    margin-right: 2%;
+    margin-right: 3rem;
 
     &:hover {
         background-color: ${props => props.theme === 'light' ? '#F6DDCC' : '#1e293b'};   
@@ -47,11 +47,15 @@ const ThemeButton = styled.button`
 
     @media (min-width: 768px) {
         font-size: 1.125rem;
-        padding: 1rem 1.6rem;
+        padding: 1rem 1.1rem;
     }
 `
 
 const TitleDiv = styled.div`
+
+    a {
+        text-decoration: none;
+    }
 
     h1 {
         align-content: center;
