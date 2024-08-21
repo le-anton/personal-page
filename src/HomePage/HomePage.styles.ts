@@ -49,7 +49,7 @@ const PhotoWrapper = styled.div`
     font-size: 0.9em;
 
     img {
-        width: 22%;
+        width: 20%;
         min-width: 225px;
         box-shadow: grey 0px 13px 27px -5px, grey 0px 8px 16px -8px;
     }
