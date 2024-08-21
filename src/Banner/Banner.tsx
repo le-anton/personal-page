@@ -25,7 +25,7 @@ const Banner = (props: BannerProps) => {
 
     return (
         <s.BannerDiv theme={theme}>
-            <s.TitleDiv className="first">
+            <s.TitleDiv className="left">
                 <Link to={"/"}>
                     <h1>
                         <span className="first">{props.firstName}</span>&nbsp;
@@ -40,7 +40,7 @@ const Banner = (props: BannerProps) => {
             </s.ButtonsWrapper>
             <s.ThemeButton
                 role="button"
-                className="switch-theme last"
+                className="switch-theme right"
                 onClick={() => setTheme(switchTheme())}
                 theme={theme}
             >

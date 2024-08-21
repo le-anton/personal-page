@@ -78,5 +78,15 @@ export const videoList: MediaImageMap[] = [
         alt: 'Live Forever solo',
         googleId: '1gdUyL4AeeyUvd36wt6tld5WPaRn4OwZ2',
         caption: 'The solo from Live Forever - Oasis'
+    },
+    {
+        alt: 'Smoke on the Water solo',
+        googleId: '12Rg8U5SVo_CZFPIgItKSQwjoa_ruaNSK',
+        caption: 'The solo from Smoke On The Water - Deep Purple'
+    },
+    {
+        alt: 'Layla (Unplugged) solo',
+        googleId: '1TX_xCSQw3ltD866XZdRNwm47kpkFjXSI',
+        caption: 'The solo from Layla (Unplugged) - Eric Clapton'
     }
 ]

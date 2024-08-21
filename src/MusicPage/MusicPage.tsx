@@ -34,18 +34,6 @@ const MusicPage = () => {
                     );
                 })}
             </s.VideosContainer>
-            <s.EmbedWrapper>
-                <div className="iframe-container">
-                    <iframe
-                        className="youtube-player"
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=_0hNDejrMSfKfTEh?autoplay=1&controls=0"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                    ></iframe>
-                </div>
-            </s.EmbedWrapper>
         </s.MusicPageWrapper>
     );
 };

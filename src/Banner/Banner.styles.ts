@@ -31,12 +31,12 @@ const BannerDiv = styled.div`
             }
         }
 
-        .first {
+        .left {
             width: 50%;
             line-height: 0.3;
         }
 
-        .last {
+        .right {
             line-height: 0.3;
             order: 2;
         }
