@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const PhotosPageWrapper = styled.div`
     background-color: ${props => props.theme === 'light' ? 'whitesmoke' : '#34495E'};
-    border: 4px solid indianred;
+    border: 3px solid indianred;
     border-radius: 10px;
     position: relative;
     width: 100vw;
@@ -15,11 +15,16 @@ const PhotosPageWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     color: ${props => props.theme === 'light' ? 'black' : 'white'};
+
+    @media all and (max-width: 768px) {
+        font-size: 0.8em;
+
+    }
 `
 
 const PhotoRow = styled.div`
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     padding: 4px;
     width: 80%;
 `
@@ -66,6 +71,10 @@ const IntroDiv = styled.div`
 
     p {
         margin: 8px;
+    }
+
+    @media all and (max-width: 768px) {
+        font-size: 1.5em;
     }
 `
 

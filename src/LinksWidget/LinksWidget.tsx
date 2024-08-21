@@ -38,14 +38,14 @@ const LinksWidget = () => {
                 label="Github"
                 size="lg"
             />
-            {/* <ActionButton
+            <ActionButton
                 faIconPrefix={faFile.prefix as IconPrefix}
                 faIconName={faFile.iconName as IconName}
                 // url="https://flowcv.com/resume/u58epf4kb2"
                 url=""
                 label="CV"
                 size="lg"
-            /> //TODO: uncomment once CV is ready, consider making it a google drive link as well*/}
+            />
         </s.WidgetWrapper>
     );
 };

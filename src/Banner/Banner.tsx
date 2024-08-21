@@ -25,7 +25,7 @@ const Banner = (props: BannerProps) => {
 
     return (
         <s.BannerDiv theme={theme}>
-            <s.TitleDiv>
+            <s.TitleDiv className="first">
                 <Link to={"/"}>
                     <h1>
                         <span className="first">{props.firstName}</span>&nbsp;
@@ -33,12 +33,14 @@ const Banner = (props: BannerProps) => {
                     </h1>
                 </Link>
             </s.TitleDiv>
-            <NavButton path="/" name="Home"></NavButton>
-            <NavButton path="/photos" name="Photos"></NavButton>
-            <NavButton path="/music" name="Music"></NavButton>
+            <s.ButtonsWrapper className="middle">
+                <NavButton path="/" name="Home"></NavButton>
+                <NavButton path="/photos" name="Photos"></NavButton>
+                <NavButton path="/music" name="Music"></NavButton>
+            </s.ButtonsWrapper>
             <s.ThemeButton
                 role="button"
-                className="switch-theme"
+                className="switch-theme last"
                 onClick={() => setTheme(switchTheme())}
                 theme={theme}
             >

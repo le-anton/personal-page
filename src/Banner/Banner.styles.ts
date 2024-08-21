@@ -7,15 +7,40 @@ const BannerDiv = styled.div`
     border-radius: 10px;
     position: relative;
     width: auto;
-    font-size: 2em;
-    height: 100px;
+    font-size: 2em;    
     text-align: left;
-    padding-left: 1.8em;
+    padding: 0 1.8em;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
     color: ${props => props.theme === 'light' ? 'black' : 'white'};
+
+    @media all and (max-width: 768px) {
+        flex-wrap: wrap;
+        padding: 0 1em;
+
+        .middle {
+            width: 100%;
+            order: 3;
+            margin: -2px 0 15px;
+            justify-content: space-evenly;
+
+            @media all and (max-width: 568px) {
+                justify-content: space-between;
+            }
+        }
+
+        .first {
+            width: 50%;
+            line-height: 0.3;
+        }
+
+        .last {
+            line-height: 0.3;
+            order: 2;
+        }
+    }
 `
 
 const ThemeButton = styled.button`
@@ -26,8 +51,7 @@ const ThemeButton = styled.button`
     color: ${props => props.theme === 'dark' ? '#0d172a' : 'white'};
     cursor: pointer;
     display: inline-block;
-    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1.1rem;
+    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";    
     font-weight: 600;
     line-height: 1;
     text-align: center;
@@ -38,20 +62,18 @@ const ThemeButton = styled.button`
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    margin-right: 3rem;
+    font-size: 1.125rem;
+    padding: 1rem 1.1rem;
 
     &:hover {
-        background-color: ${props => props.theme === 'light' ? '#F6DDCC' : '#1e293b'};   
+        background-color: ${props => props.theme === 'light' ? '#F6DDCC' : '#1e293b'};
         color: ${props => props.theme === 'light' ? '#0d172a' : 'white'};
     }
 
-    @media (min-width: 768px) {
-        font-size: 1.125rem;
-        padding: 1rem 1.1rem;
-    }
 `
 
 const TitleDiv = styled.div`
+    line-height: 0.8;
 
     a {
         text-decoration: none;
@@ -96,12 +118,21 @@ const ToggleDiv = styled.div`
     width: 10vw;
 `
 
+const ButtonsWrapper = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+`
+
 const s = {
     BannerDiv,
     ButtonDiv,
     ToggleDiv,
     TitleDiv,
-    ThemeButton
+    ThemeButton,
+    ButtonsWrapper
 };
 
 

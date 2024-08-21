@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 const PageContainer = styled.div`
     height: 100vh;
-    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: auto;
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;

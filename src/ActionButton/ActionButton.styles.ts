@@ -27,6 +27,7 @@ const ButtonContainer = styled.div`
     padding-top: 12px;
     width: 80px;
     height: 80px;
+    box-shadow: grey 0px 4px 24px;
 
     &:hover {
         background-color: ${props => props.theme === 'light' ? '#F6DDCC' : '#1e293b'};   
@@ -35,6 +36,16 @@ const ButtonContainer = styled.div`
 
     p {
         font-size: small;
+    }
+
+    @media all and (max-width: 768px) {
+        font-size: 0.8em;
+        width: 60px;
+        height: 60px;
+
+        p {
+            font-size: x-small;
+        }
     }
 `
 

@@ -16,29 +16,28 @@ const MusicPage = () => {
                     tunes!
                 </p>
             </s.IntroDiv>
-            <div>
+            <s.VideosContainer>
                 {videos.map((video, i) => {
                     return (
-                        <s.VideoDiv key={i}>
-                            <iframe
-                                src={`https://drive.google.com/file/d/${video.googleId}/preview`}
-                                width="640"
-                                height="400"
-                                title="Google drive video player"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                            />
+                        <>
+                            <s.VideoDiv key={i}>
+                                <iframe
+                                    className="guitar-player"
+                                    src={`https://drive.google.com/file/d/${video.googleId}/preview`}
+                                    title="Google drive video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                />
+                            </s.VideoDiv>
                             <span className="caption">{video.caption}</span>
-                        </s.VideoDiv>
+                        </>
                     );
                 })}
-            </div>
+            </s.VideosContainer>
             <s.EmbedWrapper>
                 <div className="iframe-container">
                     <iframe
                         className="youtube-player"
-                        width="640"
-                        height="400"
                         src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=_0hNDejrMSfKfTEh?autoplay=1&controls=0"
                         title="YouTube video player"
                         frameBorder="0"

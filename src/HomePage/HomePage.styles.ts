@@ -11,11 +11,15 @@ const HomePageWrapper = styled.div`
     text-align: left;
     padding: 1.2em;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+    gap: 6%;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     color: ${props => props.theme === 'light' ? 'black' : 'white'};
     flex: 1;
+    @media all and (max-width: 763px) {
+        padding: 0.8em;
+    }
 `
 
 const IntroDiv = styled.div`
@@ -27,12 +31,34 @@ const IntroDiv = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    height: 3em;
+
+    @media all and (max-width: 768px) {
+        font-size: 0.6em;
+        padding: 0.3em;
+    }
+`
+
+const PhotoWrapper = styled.div`
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    font-family: Rockwell, sans-serif;
+    font-size: 0.9em;
+
+    img {
+        width: 22%;
+        min-width: 225px;
+        box-shadow: grey 0px 13px 27px -5px, grey 0px 8px 16px -8px;
+    }
 `
 
 const s = {
     HomePageWrapper,
-    IntroDiv
+    IntroDiv,
+    PhotoWrapper
 };
 
 

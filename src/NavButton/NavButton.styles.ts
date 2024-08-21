@@ -25,6 +25,11 @@ const ButtonWrapper = styled.div`
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
+
+        @media all and (max-width: 768px) {
+            line-height: 0.8;
+            padding: .575rem 1rem;
+        }
     }
 
     .nav-button:not(:disabled):hover {

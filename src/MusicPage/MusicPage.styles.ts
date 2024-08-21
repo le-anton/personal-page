@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const MusicPageWrapper = styled.div`
     background-color: ${props => props.theme === 'light' ? 'whitesmoke' : '#34495E'};
-    border: 4px solid indianred;
+    border: 3px solid indianred;
     border-radius: 10px;
     position: relative;
     width: 100vw;
@@ -12,11 +12,14 @@ const MusicPageWrapper = styled.div`
     padding: 1.2em;
     display: flex;
     flex-flow: column nowrap;
-    gap: 12px;
+    gap: 15px;
     align-items: center;
     justify-content: space-between;
     color: ${props => props.theme === 'light' ? 'black' : 'white'};
     flex: 1;
+    @media all and (max-width: 768px) {
+        padding: 0.8em;
+    }
 `
 
 const IntroDiv = styled.div`
@@ -39,6 +42,10 @@ const IntroDiv = styled.div`
     p {
         margin: 8px;
     }
+
+    @media all and (max-width: 768px) {
+        font-size: 0.7em;
+    }
 `
 
 const VideoDiv = styled.div`
@@ -46,21 +53,45 @@ const VideoDiv = styled.div`
     flex-flow: column nowrap;
     align-items: center;
     gap: 5px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
 
-    .caption {
-        font-family: Rockwell, sans-serif;
-        font-size: 0.8em;        
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
+
 `
 
 const EmbedWrapper = styled.div`
+`
+
+const VideosContainer = styled.div`
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    .caption {
+        display: flex;
+        justify-content: center;
+        font-family: Rockwell, sans-serif;
+        font-size: 0.8em;
+        @media all and (max-width: 768px) {
+            font-size: 0.5em;
+        }
+    }
 `
 
 const s = {
     MusicPageWrapper,
     IntroDiv,
     VideoDiv,
-    EmbedWrapper
+    EmbedWrapper,
+    VideosContainer
 };
 
 
