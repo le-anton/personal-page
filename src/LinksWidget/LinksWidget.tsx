@@ -41,8 +41,7 @@ const LinksWidget = () => {
             <ActionButton
                 faIconPrefix={faFile.prefix as IconPrefix}
                 faIconName={faFile.iconName as IconName}
-                // url="https://flowcv.com/resume/u58epf4kb2"
-                url=""
+                url="https://flowcv.com/resume/u58epf4kb2"
                 label="CV"
                 size="lg"
             />

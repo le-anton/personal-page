@@ -1,8 +1,8 @@
-import styled from 'styled-components'
-
+import styled from 'styled-components';
 
 const MusicPageWrapper = styled.div`
-    background-color: ${props => props.theme === 'light' ? 'whitesmoke' : '#34495E'};
+    background-color: ${(props) =>
+        props.theme === 'light' ? 'whitesmoke' : '#34495E'};
     border: 3px solid indianred;
     border-radius: 10px;
     position: relative;
@@ -15,26 +15,27 @@ const MusicPageWrapper = styled.div`
     gap: 15px;
     align-items: center;
     justify-content: space-between;
-    color: ${props => props.theme === 'light' ? 'black' : 'white'};
+    color: ${(props) => (props.theme === 'light' ? 'black' : 'white')};
     flex: 1;
     @media all and (max-width: 768px) {
         padding: 0.8em;
     }
-`
+`;
 
 const IntroDiv = styled.div`
     padding: 0.5em;
     border: 3px whitesmoke solid;
     border-radius: 0.25em;
     font-size: 0.8em;
-    background-color: ${props => props.theme === 'light' ? 'bisque' : '#34495E'};
+    background-color: ${(props) =>
+        props.theme === 'light' ? 'bisque' : '#34495E'};
     font-family: Rockwell, sans-serif;
     display: flex;
-    flex-flow: column nowrap;    
+    flex-flow: column nowrap;
     align-items: center;
     box-sizing: border-box;
     width: 100%;
-    
+
     h3 {
         margin: 15px 0 0;
     }
@@ -44,9 +45,9 @@ const IntroDiv = styled.div`
     }
 
     @media all and (max-width: 768px) {
-        font-size: 0.7em;
+        font-size: 1.5em;
     }
-`
+`;
 
 const VideoDiv = styled.div`
     display: flex;
@@ -65,11 +66,9 @@ const VideoDiv = styled.div`
         left: 0;
         top: 0;
     }
+`;
 
-`
-
-const EmbedWrapper = styled.div`
-`
+const EmbedWrapper = styled.div``;
 
 const VideosContainer = styled.div`
     display: flex;
@@ -84,15 +83,14 @@ const VideosContainer = styled.div`
             font-size: 0.5em;
         }
     }
-`
+`;
 
 const s = {
     MusicPageWrapper,
     IntroDiv,
     VideoDiv,
     EmbedWrapper,
-    VideosContainer
+    VideosContainer,
 };
-
 
 export default s;
